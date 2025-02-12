@@ -4,9 +4,6 @@ const fs = require('fs');
 const crypto = require('crypto');
 const router = express.Router();
 
-// Middleware to parse JSON body
-router.use(express.json());
-
 // Serve the index.html file for the root route
 router.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../views/index.html'));
